@@ -6,7 +6,7 @@
 - Front: React + typeScript
 - Styles: Sass
 
-Ссылка на демо: ...
+Ссылка на демо: https://my-web-story-app.vercel.app/
 
 ## Инструкция по клонированию репозитория
 
@@ -14,7 +14,7 @@
 - Выполните следующую команду:
 
 ```sh
-git clone ...
+git clone https://github.com/hardMode551/MyWebStory_app.git
 ```
 
 ## Установка зависимостей
