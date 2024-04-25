@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  a {
+    font-size: 40px;
+    line-height: 80px;
+
+    padding: 20px;
+
+    &:hover {
+      color: #4f8a97;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 700px) {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}

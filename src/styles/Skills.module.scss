@@ -1,0 +1,96 @@
+.root {
+  line-height: 40px;
+
+  min-height: 100vh;
+
+  .container {
+    .item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: row;
+      gap: 40px;
+
+      @media screen and (max-width: 1919px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: 1600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 770px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .skills {
+        padding: 20px;
+
+        background-color: #002127d0;
+
+        border: 1px solid rgb(13, 127, 161);
+
+        .skills_title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        input[type="range"] {
+          width: 100%;
+          height: 25px;
+
+          -webkit-appearance: none;
+          appearance: none;
+
+          background: rgba(13, 126, 161, 0.521);
+
+          border-radius: 5px;
+
+          outline: none;
+          &::-webkit-slider-thumb {
+            width: 10px;
+            height: 10px;
+
+            -webkit-appearance: none;
+            appearance: none;
+
+            background: rgb(52, 183, 223);
+
+            border: none;
+            border-radius: 50%;
+
+            cursor: pointer;
+          }
+
+          &::-webkit-slider-runnable-track {
+            height: 10px;
+
+            background: linear-gradient(
+                to right,
+                rgb(52, 183, 223),
+                rgb(19, 71, 87)
+              )
+              no-repeat;
+
+            border-radius: 5px;
+          }
+
+          &::-webkit-slider-runnable-track::before {
+            content: "";
+            display: block;
+
+            position: absolute;
+            left: 0;
+
+            width: 100%;
+            height: 20px;
+
+            background-color: transparent;
+
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

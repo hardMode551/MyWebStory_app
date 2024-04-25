@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+  color: #8fc9d4;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  letter-spacing: 1px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.951), rgba(0, 0, 0, 0.911)),
+    url("./assets/cyberpunk.gif") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: "Press Start 2P", system-ui;
+
+  cursor: pointer;
+  border: none;
+
+  color: #8fc9d4;
+}
+
+.app {
+  background: rgba(41, 139, 158, 0.067);
+  max-width: 1920px;
+  margin: 0 auto;
+
+  min-height: 100vh;
+}
+
+.logo {
+  margin: 0;
+  padding: 10px 0 10px 0;
+
+  background-color: #02718548;
+
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 470px) {
+    font-size: 14px;
+  }
+}
+
+.routBlock {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  padding-top: 60px;
+}
+
+.routBtn {
+  width: 400px;
+  height: 80px;
+
+  font-size: 30px;
+
+  background-color: #002127;
+
+  @media screen and (max-width: 1366px) {
+    width: 300px;
+    height: 60px;
+
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 780px) {
+    width: 250px;
+    height: 50px;
+
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 12px;
+    width: 150px;
+    height: 30px;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

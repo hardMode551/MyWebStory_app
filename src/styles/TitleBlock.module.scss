@@ -1,0 +1,26 @@
+.root {
+  background: linear-gradient(rgba(4, 19, 27, 0.851), rgba(0, 0, 0, 0.851)),
+    url("../assets/back-code.jpg") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+
+  min-height: 100vh;
+
+  .container {
+    width: 1920px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+
+      color: #628a92;
+    }
+  }
+}

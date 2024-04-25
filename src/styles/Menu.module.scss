@@ -1,0 +1,173 @@
+$primary-color: #2980b9;
+$secondary-color: #027185d0;
+$transition-time: 0.35s;
+
+// Миксин для анимации
+@mixin transition-ease {
+  -webkit-transition: all $transition-time ease;
+  transition: all $transition-time ease;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  min-height: 100vh;
+  .container {
+    text-align: center;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 40px;
+
+      background-color: #02718548;
+
+      h1 {
+        font-size: 32px;
+        line-height: 52px;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 0;
+        line-height: 40px;
+      }
+
+      @media screen and (max-width: 970px) {
+        h1 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      @media screen and (max-width: 770px) {
+        h1 {
+          font-size: 20px;
+          line-height: 26px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      @media screen and (max-width: 470px) {
+        padding: 0;
+
+        h1 {
+          font-size: 10px;
+          line-height: 18px;
+        }
+
+        p {
+          font-size: 8px;
+          line-height: 12px;
+        }
+      }
+    }
+
+    .img {
+      width: 800px;
+
+      @media screen and (max-width: 970px) {
+        width: 500px;
+      }
+
+      @media screen and (max-width: 550px) {
+        width: 300px;
+      }
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 40px 0 40px 0;
+    }
+
+    nav {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @media screen and (max-width: 550px) {
+          gap: 15px;
+        }
+
+        li {
+          display: flex;
+          margin: 0 1.5em;
+          padding: 0;
+          font-size: 20px;
+
+          @media screen and (max-width: 550px) {
+            font-size: 16px;
+          }
+
+          a {
+            padding: 0.5em 0;
+            position: relative;
+            letter-spacing: 1px;
+            text-decoration: none;
+
+            &:before,
+            &:after {
+              position: absolute;
+              @include transition-ease;
+            }
+
+            &:before {
+              bottom: 0;
+              display: block;
+              height: 3px;
+              width: 0%;
+              content: "";
+              background-color: $primary-color;
+            }
+
+            &:after {
+              left: 0;
+              top: 0;
+              padding: 0.5em 0;
+              content: attr(data-hover);
+              color: $secondary-color;
+              white-space: nowrap;
+              max-width: 0%;
+              overflow: hidden;
+            }
+
+            &:hover:before,
+            &.current:before {
+              opacity: 1;
+              width: 100%;
+            }
+
+            &:hover:after,
+            &.current:after {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

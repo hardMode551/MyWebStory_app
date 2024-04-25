@@ -1,0 +1,44 @@
+header {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+
+  width: 280px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 20px;
+
+  background-color: #002127d0;
+
+  z-index: 1;
+
+  h1 {
+    width: 200px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #027185d0;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      li {
+        font-size: 20px;
+        a {
+          &:hover {
+            text-decoration: underline;
+            color: #027185d0;
+          }
+        }
+      }
+    }
+  }
+}
