@@ -5,13 +5,13 @@ import styles from "../styles/TimeLine.module.scss";
 
 const TimeLine: React.FC = () => {
   const fadeInFromLeft = {
-    initial: { opacity: 0, x: 500 },
+    initial: { opacity: 0, x: 300 },
     whileInView: { opacity: 1, x: 0, transition: { duration: 1 } },
     viewport: { once: true },
   };
 
   const fadeInFromRight = {
-    initial: { opacity: 0, x: -500 },
+    initial: { opacity: 0, x: -300 },
     whileInView: { opacity: 1, x: 0, transition: { duration: 1 } },
     viewport: { once: true },
   };
