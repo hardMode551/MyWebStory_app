@@ -20,11 +20,8 @@ $transition-time: 0.35s;
     text-align: center;
 
     .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
       padding: 40px;
+      margin: 20px;
 
       background-color: #02718548;
 
@@ -35,7 +32,6 @@ $transition-time: 0.35s;
 
       p {
         font-size: 18px;
-        margin: 0;
         line-height: 40px;
       }
 
@@ -64,9 +60,10 @@ $transition-time: 0.35s;
       }
 
       @media screen and (max-width: 470px) {
-        padding: 0;
+        padding: 5px;
 
         h1 {
+          margin: 0 0 30px 0;
           font-size: 10px;
           line-height: 18px;
         }
@@ -98,7 +95,7 @@ $transition-time: 0.35s;
     nav {
       text-align: center;
       text-transform: uppercase;
-      font-weight: 500;
+
       ul {
         display: flex;
         flex-direction: column;

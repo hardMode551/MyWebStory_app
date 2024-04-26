@@ -20,7 +20,7 @@ const Menu: React.FC<Paths> = ({ paths }) => {
     },
     {
       type: "paragraph" as const,
-      text: "Ниже вы можете посмотреть информацию обо мне, ",
+      text: "Ниже вы можете ознакомиться с информацей обо мне, ",
     },
     {
       type: "paragraph" as const,
