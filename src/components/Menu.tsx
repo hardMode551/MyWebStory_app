@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import Logotip3 from "../assets/Logotip3.png";
 import AnimatedText from "./AnimatedText";
@@ -36,6 +36,24 @@ const Menu: React.FC<Paths> = ({ paths }) => {
     },
   };
 
+  const [skipAnimation, setSkipAnimation] = React.useState(false);
+
+  const navRef = React.useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+
+  const handleAnimationComplete = () => {
+    if (navRef.current) {
+      controls.start({ opacity: 1, y: 0 });
+      navRef.current.focus();
+    }
+  };
+
+  const handleNavAnimation = () => {
+    controls.start({ opacity: 1, y: 0 });
+    navRef.current?.focus();
+    setSkipAnimation(true);
+  };
+
   return (
     <section className={styles.root}>
       <div className={styles.container}>
@@ -43,22 +61,34 @@ const Menu: React.FC<Paths> = ({ paths }) => {
           className={styles.title}
           initial="hidden"
           animate="visible"
+          exit="exit"
           variants={container}
+          onAnimationComplete={handleAnimationComplete}
         >
           <div>
-            {placeholderText.map((item, index) => {
-              return <AnimatedText {...item} key={index} />;
+            {placeholderText.map((item) => {
+              return (
+                <AnimatedText
+                  {...item}
+                  key={item.text}
+                  skipAnimation={skipAnimation}
+                />
+              );
             })}
           </div>
+          {/* Кнопка для запуска анимации навигационного меню */}
+          <button onClick={handleNavAnimation}>Пропустить</button>
         </motion.div>
 
         <motion.nav
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 5 }}
+          animate={controls}
+          transition={{ duration: 1, delay: 0.5 }}
+          ref={navRef}
+          tabIndex={-1}
         >
           <img className={styles.img} src={Logotip3} alt="Logotip3" />
-
+          
           <ul>
             <li>
               <Link to={paths[1]} className={styles.link} data-hover="Обо мне">

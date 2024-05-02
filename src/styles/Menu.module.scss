@@ -35,6 +35,33 @@ $transition-time: 0.35s;
         line-height: 40px;
       }
 
+      button{
+        padding: 10px;
+        font-size: 16px;
+        line-height: 24px;
+
+        background-color: #02718548;
+
+        &:hover{
+          background-color: #027185d0;
+        }
+
+        @media screen and (max-width: 970px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        @media screen and (max-width: 770px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        @media screen and (max-width: 470px) {
+          font-size: 8px;
+          line-height: 10px;
+        }
+      }
+
       @media screen and (max-width: 970px) {
         h1 {
           font-size: 24px;
@@ -95,6 +122,10 @@ $transition-time: 0.35s;
     nav {
       text-align: center;
       text-transform: uppercase;
+
+      &:focus {
+        outline: none;
+      }
 
       ul {
         display: flex;

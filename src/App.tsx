@@ -31,7 +31,10 @@ const App: React.FC = () => {
   ];
 
   const handleNextClick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
     const currentIndex = paths.indexOf(location.pathname);
     const nextIndex = currentIndex === paths.length - 1 ? 0 : currentIndex + 1;
@@ -40,7 +43,10 @@ const App: React.FC = () => {
   };
 
   const handlePrevClick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
     const currentIndex = paths.indexOf(location.pathname);
     const prevIndex = currentIndex === 0 ? paths.length - 1 : currentIndex - 1;

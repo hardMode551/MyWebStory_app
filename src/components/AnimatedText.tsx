@@ -12,6 +12,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
 interface AnimatedCharactersProps {
   type: "paragraph" | "heading1";
   text: string;
+  skipAnimation?: boolean; // Добавляем новое свойство для пропуска анимации
 }
 
 const Paragraph: React.FC<WrapperProps> = ({ children }) => <p>{children}</p>;
@@ -25,6 +26,7 @@ const tagMap: { [key: string]: React.ElementType } = {
 const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
   type,
   text,
+  skipAnimation,
 }) => {
   const item = {
     hidden: {
@@ -41,7 +43,9 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
   const words: string[][] = [];
 
   for (const item of splitWords) {
-    words.push(item.split(""));
+    if (item.trim() !== "") { // Проверяем наличие символов, игнорируя пустые строки
+      words.push(item.split(""));
+    }
   }
 
   words.forEach((word) => {
@@ -62,9 +66,16 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
               }}
               key={index}
             >
-              <motion.span style={{ display: "inline-block" }} variants={item}>
-                {element}
-              </motion.span>
+              {!skipAnimation ? ( // Применяем анимацию только если skipAnimation равно false
+                <motion.span
+                  style={{ display: "inline-block" }}
+                  variants={item}
+                >
+                  {element}
+                </motion.span>
+              ) : (
+                <span>{element}</span>
+              )}
             </span>
           ))}
         </Wrapper>
