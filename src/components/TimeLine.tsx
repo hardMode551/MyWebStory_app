@@ -20,7 +20,7 @@ const TimeLine: React.FC = () => {
     <section className={styles.root}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <p>Февраль 2023 — по настоящее время:</p>
+          <p>Май 2023 — по настоящее время:</p>
           <h1>WebPulse Studio</h1>
           <h2>Frontend Developer</h2>
         </div>
