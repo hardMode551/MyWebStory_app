@@ -27,7 +27,7 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromLeft} className={styles.item}>
           <h3>- HyperAuto (Магазин автозапчастей):</h3>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div className={styles.description}>
             <p>• Ссылка на разработанный проект -</p>
             <a href="https://hyperauto.ru">https://hyperauto.ru</a>
           </div>
@@ -46,7 +46,7 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromRight} className={styles.item}>
           <h3>- Tortomaster (Магазин кондитерских товаров):</h3>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div className={styles.description}>
             <p>• Ссылка на разработанный проект -</p>
             <a href="https://tortomaster.ru">https://tortomaster.ru</a>
           </div>
@@ -64,7 +64,7 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromLeft} className={styles.item}>
           <h3>- Jazz Shop (Магазин музыкальных инструментов):</h3>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div className={styles.description}>
             <p>• Ссылка на разработанный проект -</p>
             <a href="https://jazz-shop.ru">https://jazz-shop.ru</a>
           </div>

@@ -87,6 +87,26 @@
 
       border: 1px solid rgb(13, 127, 161);
 
+      .description{
+        font-size: 18px;
+        line-height: 28px;
+
+        @media screen and (max-width: 1050px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @media screen and (max-width: 550px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
       h3 {
         font-size: 24px;
       }
