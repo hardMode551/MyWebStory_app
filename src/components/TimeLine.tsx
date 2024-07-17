@@ -27,6 +27,10 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromLeft} className={styles.item}>
           <h3>- HyperAuto (Магазин автозапчастей):</h3>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <p>• Ссылка на разработанный проект -</p>
+            <a href="https://hyperauto.ru">https://hyperauto.ru</a>
+          </div>
           <p>
             • Улучшил интерфейс, интегрировал с бэкендом и создал отзывчивый UI,
             что повысило удобство использования и стабильность работы
@@ -42,6 +46,10 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromRight} className={styles.item}>
           <h3>- Tortomaster (Магазин кондитерских товаров):</h3>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <p>• Ссылка на разработанный проект -</p>
+            <a href="https://tortomaster.ru">https://tortomaster.ru</a>
+          </div>
           <p>
             • Разработал интерфейс, интегрировал с системой заказов, улучшил
             поиск и выбор продуктов. Эффективная онлайн-платформа с удобным
@@ -56,6 +64,10 @@ const TimeLine: React.FC = () => {
 
         <motion.div {...fadeInFromLeft} className={styles.item}>
           <h3>- Jazz Shop (Магазин музыкальных инструментов):</h3>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <p>• Ссылка на разработанный проект -</p>
+            <a href="https://jazz-shop.ru">https://jazz-shop.ru</a>
+          </div>
           <p>
             • Разработал веб-платформу, интегрировал с системой управления
             инвентарем, создал уникальный интерфейс. Доступ к разнообразным
