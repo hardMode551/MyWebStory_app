@@ -80,7 +80,7 @@ const Skills: React.FC = () => {
         <div className={styles.item}>
           {items.map((item, index) => (
             <motion.div
-              className={styles.skills}
+            className={`${styles.skills} ${styles[`skill_${index}`]}`}
               key={index}
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,12 +90,8 @@ const Skills: React.FC = () => {
               {item.skills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  style={{
-                    width: "90%",
-                    margin: "0 auto",
-                  }}
-                  whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                  whileTap={{ scale: 1 }}
                 >
                   <div className={styles.skills_title}>
                     <p>{skill.name}</p>

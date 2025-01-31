@@ -12,20 +12,12 @@ const Menu: React.FC<Paths> = ({ paths }) => {
   const placeholderText = [
     {
       type: "heading1" as const,
-      text: "Привет, меня зовут Сергей, я Frontend-developer",
+      text: "Привет, меня зовут Сергей, я Frontend-developer.",
     },
     {
       type: "paragraph" as const,
-      text: "Я создаю интерактивные веб-приложения.",
-    },
-    {
-      type: "paragraph" as const,
-      text: "Ниже вы можете ознакомиться с информацей обо мне, ",
-    },
-    {
-      type: "paragraph" as const,
-      text: 'переключаясь по активным ссылкам или поочереди нажимая кнопку "Далее"',
-    },
+      text: 'Я создаю интерактивные веб-приложения. Ниже вы можете ознакомиться с информацей обо мне, переключаясь по активным ссылкам или поочереди нажимая кнопку "Далее"',
+    }
   ];
 
   const container = {

@@ -12,32 +12,44 @@ $transition-time: 0.35s;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1300px;
+
   margin: 0 auto;
 
-  min-height: 100vh;
   .container {
     text-align: center;
 
+    max-width: 1440px;
+
     .title {
-      padding: 40px;
+      padding: 60px;
       margin: 20px;
 
       background-color: #02718548;
 
+      position: sticky;
+      top: 0px;
+
       h1 {
         font-size: 32px;
-        line-height: 52px;
+        line-height: 46px;
+        letter-spacing: normal;
+
+        margin-bottom: 40px;
       }
 
       p {
-        font-size: 18px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: normal;
+
+        width: 80%;
+        margin: 60px auto;
       }
 
       button{
-        padding: 10px;
-        font-size: 16px;
+        padding: 14px;
+
+        font-size: 20px;
         line-height: 24px;
 
         background-color: #02718548;
@@ -45,83 +57,18 @@ $transition-time: 0.35s;
         &:hover{
           background-color: #027185d0;
         }
-
-        @media screen and (max-width: 970px) {
-          font-size: 14px;
-          line-height: 20px;
-        }
-
-        @media screen and (max-width: 770px) {
-          font-size: 12px;
-          line-height: 16px;
-        }
-
-        @media screen and (max-width: 470px) {
-          font-size: 8px;
-          line-height: 10px;
-        }
-      }
-
-      @media screen and (max-width: 970px) {
-        h1 {
-          font-size: 24px;
-          line-height: 32px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 24px;
-        }
-      }
-
-      @media screen and (max-width: 770px) {
-        h1 {
-          font-size: 20px;
-          line-height: 26px;
-        }
-
-        p {
-          font-size: 12px;
-          line-height: 16px;
-        }
-      }
-
-      @media screen and (max-width: 470px) {
-        padding: 5px;
-
-        h1 {
-          margin: 0 0 30px 0;
-          font-size: 10px;
-          line-height: 18px;
-        }
-
-        p {
-          font-size: 8px;
-          line-height: 12px;
-        }
       }
     }
 
     .img {
-      width: 800px;
-
-      @media screen and (max-width: 970px) {
-        width: 500px;
-      }
-
-      @media screen and (max-width: 550px) {
-        width: 300px;
-      }
-    }
-
-    h1 {
-      font-size: 40px;
-      margin: 40px 0 40px 0;
+      width: 600px;
     }
 
     nav {
       text-align: center;
       text-transform: uppercase;
+
+      margin: 40px 0;
 
       &:focus {
         outline: none;
@@ -131,15 +78,11 @@ $transition-time: 0.35s;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 30px;
 
         padding: 0;
         margin: 0;
         list-style: none;
-
-        @media screen and (max-width: 550px) {
-          gap: 15px;
-        }
 
         li {
           display: flex;
@@ -147,13 +90,11 @@ $transition-time: 0.35s;
           padding: 0;
           font-size: 20px;
 
-          @media screen and (max-width: 550px) {
-            font-size: 16px;
-          }
-
           a {
-            padding: 0.5em 0;
             position: relative;
+
+            padding: 10px 0;
+            
             letter-spacing: 1px;
             text-decoration: none;
 
@@ -193,6 +134,244 @@ $transition-time: 0.35s;
             &.current:after {
               max-width: 100%;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .root {
+    max-width: 1024px;
+  
+    .container {
+      .title {
+        padding: 30px;
+        margin: 15px;
+
+        h1 {
+          font-size: 20px;
+          line-height: 36px;
+
+          margin-bottom: 20px;
+        }
+  
+        p {
+          font-size: 13px;
+          line-height: 22px;
+          letter-spacing: normal;
+
+          margin: 40px auto;
+        }
+  
+        button{
+          padding: 8px;
+          font-size: 13px;
+        }
+      }
+  
+      .img {
+        width: 400px;
+      }
+  
+      nav {
+        ul {
+          gap: 20px;
+  
+          li {
+            margin: 0;
+            font-size: 13px;
+  
+            a {
+              padding: 6px 0;
+  
+              &:before {
+                height: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .root {
+    max-width: 824px;
+  
+    .container {
+      .title {
+        padding: 26px;
+        margin: 15px;
+
+        h1 {
+          font-size: 18px;
+          line-height: 34px;
+
+          margin-bottom: 18px;
+        }
+  
+        p {
+          margin: 34px auto;
+        }
+  
+        button{
+          padding: 6px;
+        }
+      }
+  
+      .img {
+        width: 360px;
+      }
+  
+      nav {
+        ul {
+          gap: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    .container {
+      .title {
+        padding: 20px;
+        margin: 10px;
+
+        h1 {
+          font-size: 16px;
+          line-height: 26px;
+
+          margin-bottom: 14px;
+        }
+  
+        p {
+          font-size: 12px;
+          line-height: 18px;
+          margin: 30px auto;
+        }
+  
+        button{
+          font-size: 12px;
+          line-height: 18px;
+
+          padding: 5px;
+        }
+      }
+  
+      .img {
+        width: 300px;
+        margin-bottom: 10px;
+      }
+  
+      nav {
+        ul {
+          gap: 12px;
+          li {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .root {
+    .container {
+      .title {
+        padding: 10px;
+
+        h1 {
+          font-size: 13px;
+          line-height: 20px;
+
+          margin-bottom: 12px;
+        }
+  
+        p {
+          width: 100%;
+
+          font-size: 11px;
+          line-height: 16px;
+
+          margin: 30px auto;
+        }
+  
+        button{
+          line-height: 16px;
+
+          padding: 8px;
+        }
+      }
+  
+      .img {
+        width: 280px;
+      }
+  
+      nav {
+        ul {
+          gap: 10px;
+          li {
+            line-height: 12px;
+
+            padding: 0px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .root {
+    .container {
+      .title {
+        padding: 10px;
+        margin: 8px;
+
+        h1 {
+          font-size: 12px;
+          line-height: 16px;
+
+          margin-bottom: 12px;
+        }
+  
+        p {
+          width: 100%;
+
+          font-size: 9px;
+          line-height: 14px;
+
+          margin: 30px auto;
+        }
+  
+        button{
+          font-size: 10px;
+          line-height: 16px;
+
+          padding: 8px;
+        }
+      }
+  
+      .img {
+        width: 260px;
+        margin-bottom: 8px;
+      }
+  
+      nav {
+        ul {
+          gap: 10px;
+          li {
+            font-size: 10px;
+            line-height: 12px;
+
+            padding: 0px 0;
           }
         }
       }

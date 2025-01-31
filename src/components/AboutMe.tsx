@@ -7,30 +7,38 @@ const AboutMe: React.FC = () => {
     <div className={styles.root}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <p>
+          <h2>
           Я Frontend-разработчик с опытом создания динамичных веб-приложений. Специализируюсь на:{" "}
-          </p>
-          <p>• JavaScript</p>
-          <p>• TypeScript</p>
-          <p>• React</p>
-          <p>• Redux (Redux Toolkit)</p>
-          <p style={{ marginTop: "60px" }}>
+          </h2>
+          <ul>
+            <li>• JavaScript</li>
+            <li>• TypeScript</li>
+            <li>• React</li>
+            <li>• Redux (Redux Toolkit)</li>
+            <li>• SASS</li>
+          </ul>
+          
+          <p>
             Ищу новую работу для участия в новых проектах и привнесения бизнес-ценности компании.
           </p>
         </div>
         <div className={styles.title}>
           <h2>Опыт и навыки:</h2>
-          <p>• Более года коммерческого опыта разработки на React</p>
-          <p>• Использую функциональные компоненты с чистым JSX, знаком с Ant Design и MUI</p>
-          <p>• Основной стейт-менеджер – Redux Toolkit/Redux</p>
-          <p>• Предпочитаю SASS для CSS</p>
-          <p>• Использую TypeScript</p>
+          <ul>
+            <li>• Более года коммерческого опыта разработки на React</li>
+            <li>• Использую функциональные компоненты с чистым JSX, знаком с Ant Design и MUI</li>
+            <li>• Основной стейт-менеджер – Redux Toolkit/Redux</li>
+            <li>• Предпочитаю SASS для CSS</li>
+            <li>• Использую TypeScript</li>
+          </ul>
         </div>
         <div className={styles.title}>
           <h2>Почему я:</h2>
-          <p>• Настойчив в достижении результатов</p>
-          <p>• Дружелюбен, коммуникабелен, отзывчив</p>
-          <p>• Обладаю вниманием к деталям, точностью и критическим мышлением</p>
+          <ul>
+            <li>• Настойчив в достижении результатов</li>
+            <li>• Дружелюбен, коммуникабелен, отзывчив</li>
+            <li>• Обладаю вниманием к деталям, точностью и критическим мышлением</li>
+          </ul>
         </div>
       </div>
     </div>

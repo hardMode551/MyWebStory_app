@@ -15,6 +15,8 @@ import AboutMe from "./components/AboutMe";
 import Menu from "./components/Menu";
 import LinkResume from "./components/LinkResume";
 
+import ScrollToTop from "./utils/ScrollToTop";
+
 import "./index.css";
 
 const App: React.FC = () => {
@@ -56,6 +58,8 @@ const App: React.FC = () => {
       <Link to={paths[0]}>
         <h1 className="logo">Главная</h1>
       </Link>
+
+      <ScrollToTop />
 
       <TransitionGroup>
         <CSSTransition key={location.pathname} classNames="fade" timeout={300}>

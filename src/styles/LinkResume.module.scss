@@ -6,24 +6,69 @@
   min-height: 100vh;
 
   a {
-    font-size: 40px;
-    line-height: 80px;
+    font-size: 34px;
+    line-height: 30px;
+    text-align: center;
 
     padding: 20px;
 
-    &:hover {
-      color: #4f8a97;
-      text-decoration: underline;
+    @media (hover: hover) {
+      &:hover {
+        color: #4f8a97;
+        text-decoration: underline;
+      }
     }
 
-    @media screen and (max-width: 700px) {
+    @media (hover: none) {
+      &:active {
+        color: #4f8a97;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .root {
+    a {
       font-size: 24px;
+      line-height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .root {
+    a {
+      font-size: 22px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    a {
+      font-size: 18px;
       line-height: 40px;
     }
+  }
+}
 
-    @media screen and (max-width: 450px) {
-      font-size: 18px;
-      line-height: 32px;
+@media screen and (max-width: 480px) {
+  .root {
+    a {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .root {
+    a {
+      font-size: 14px;
+      line-height: 26px;
     }
   }
 }
