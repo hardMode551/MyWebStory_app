@@ -18,16 +18,15 @@ $transition-time: 0.35s;
   .container {
     text-align: center;
 
+    width: 100%;
     max-width: 1440px;
+    margin: 0 auto;
 
     .title {
       padding: 60px;
       margin: 20px;
 
       background-color: #02718548;
-
-      position: sticky;
-      top: 0px;
 
       h1 {
         font-size: 32px;
@@ -44,6 +43,10 @@ $transition-time: 0.35s;
 
         width: 80%;
         margin: 60px auto;
+
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
 
       button{

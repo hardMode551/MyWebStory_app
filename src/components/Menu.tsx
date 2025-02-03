@@ -17,7 +17,7 @@ const Menu: React.FC<Paths> = ({ paths }) => {
     {
       type: "paragraph" as const,
       text: 'Я создаю интерактивные веб-приложения. Ниже вы можете ознакомиться с информацей обо мне, переключаясь по активным ссылкам или поочереди нажимая кнопку "Далее"',
-    }
+    },
   ];
 
   const container = {
@@ -68,6 +68,7 @@ const Menu: React.FC<Paths> = ({ paths }) => {
               );
             })}
           </div>
+
           {/* Кнопка для запуска анимации навигационного меню */}
           <button onClick={handleNavAnimation}>Пропустить</button>
         </motion.div>
